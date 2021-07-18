@@ -1,0 +1,39 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0 60rpx 0;
+  box-sizing: border-box;
+}
+form{
+  width: 620rpx;
+  height: 550rpx;
+  line-height: 80rpx;
+}
+input{
+  border: 2rpx solid #ccc;
+  width: 580rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+}
+button{
+  margin-top: 40rpx;
+}
+.header text{
+  font-size: 50rpx;
+  color: #666;
+}
+form text{
+  font-size: 40rpx;
+  color: #666;
+}
+
+.toRegister{ 
+  padding-right: 50rpx;
+  display: flex;
+  justify-content:flex-end;
+  font-size: 30rpx;
+}

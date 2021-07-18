@@ -1,0 +1,35 @@
+<view class="rigist">
+  <navigator hover-class="none" url="../logins/logins" wx:if="{{mihao ==''}}">未登录，请先登录</navigator>
+  <text class="mihao" wx:elif="{{mihao!=''}}">谜号: {{mihao}}</text>
+</view>
+<view class="line"></view>
+<view bindtap="myInfo">
+  <text class="iconfont icon-mymi"></text>
+  <text>个人信息编辑</text>
+</view>
+<view class="line"></view>
+<view bindtap="mymi">
+  <text class="iconfont icon-miku"></text>
+  <text>个人谜库</text>
+</view>
+<view class="line"></view>
+<view bindtap="addRiddle">
+  <text class="iconfont icon-add"></text>
+  <text>添加灯谜</text>
+</view>
+<view class="line"></view>
+<view bindtap="myforum">
+  <text class="iconfont icon-miku"></text>
+  <text>我的帖子</text>
+</view>
+<view class="line"></view>
+<view bindtap="addForum">
+  <text class="iconfont icon-add"></text>
+  <text>发布帖子</text>
+</view>
+<view class="line"></view>
+<view bindtap="logout">
+  <text class="iconfont icon-zhuxiao"></text>
+  <text>退出登录</text>
+</view>
+<view class="line"></view>

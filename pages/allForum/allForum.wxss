@@ -1,0 +1,74 @@
+
+page{
+  background: #eee;
+}
+.container{
+  width:100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom:10rpx;
+}
+.touch-item {
+ /* font-size: 30rpx; */
+ display: flex;
+ /* //均匀排布每个元素 */
+ background: #fff;
+ border-radius: 30rpx;
+ justify-content: space-between;
+ border-bottom:2px solid rgb(0,0,0);
+ width: 100%;
+ overflow: hidden;
+ margin-top:16rpx;
+}
+.content {
+ width: 100%;
+ line-height: 65rpx;
+ margin-right:0;
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ margin-left: -90px;
+}
+.del {
+ background-color: #c00;
+ width: 90px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+}
+/* .touch-move-active .content, */
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+}
+.touch-move-active .content{
+  background: rgba(180, 218, 12, 0.3);
+}
+
+.body{
+  padding-right: 20rpx;
+  display: flex;
+  font-size: 40rpx;
+  position: relative;
+}
+.publisher{
+  margin: 0 20rpx;
+  flex: 1;
+}
+
+.forumTitle{
+  padding: 0 20rpx 10rpx 20rpx;
+  font-size: 50rpx;
+  /* 单行文本溢出隐藏 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}

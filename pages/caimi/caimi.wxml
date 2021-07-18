@@ -1,0 +1,60 @@
+<view class="caimiContianer">
+  <view class="addRiddle" wx:if="{{user === '蓬瀛灯谜'}}">
+    <view class="riddleContainer">
+      <label>谜号</label>
+      <textarea class="inputRiddle" value="{{mihao}}" id="mihao" bindinput="inputRiddle"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜面</label>
+      <textarea class="inputRiddle" value="{{mimian}}" id="mimian" bindinput="inputRiddle"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜目</label>
+      <textarea class="inputRiddle" value="{{mimu}}" id="mimu" bindinput="inputRiddle"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜底</label>
+      <textarea class="inputRiddle" value="{{midi}}" id="midi" bindinput="inputRiddle"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>备注</label>
+      <textarea class="inputRiddle" value="{{remark}}" id="remark" bindinput="inputRiddle"></textarea>
+    </view>
+    <button bindtap="submitRiddle" type="primary">提交</button>
+  </view>
+  <view class="addRiddle" wx:else>
+    <view class="riddleContainer">
+      <label>谜号</label>
+      <textarea disabled class="inputRiddle" value="{{mihao}}"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜面</label>
+      <textarea disabled class="inputRiddle" value="{{mimian}}"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜目</label>
+      <textarea disabled class="inputRiddle" value="{{mimu}}"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>谜底</label>
+      <textarea class="inputRiddle" id="mymidi" bindinput="inputRiddle"></textarea>
+    </view>
+    <view class="riddleContainer">
+      <label>备注</label>
+      <textarea disabled class="inputRiddle" value="{{remark}}"></textarea>
+    </view>
+    <button bindtap="submitMidi" type="primary">提交</button>
+  </view>
+  <view class="line"></view>
+  
+  <text>射虎英雄榜</text>
+  <view class="mihaoList">
+    <view class="allMihao" wx:for="{{allList}}" wx:key="id">
+      <view class="first mihao" wx:if="{{index+1 == 1}}">{{item.mihao}}</view>
+      <view class="second mihao" wx:elif="{{index+1 == 2}}">{{item.mihao}}</view>
+      <view class="third mihao" wx:elif="{{index+1 == 3}}">{{item.mihao}}</view>
+      
+      <view class="mihao" wx:else>{{item.mihao}}</view>
+    </view>
+  </view>
+</view>

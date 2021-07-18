@@ -1,0 +1,17 @@
+<form class="form" bindsubmit="updateUser">
+    <input type="text" hidden="{{true}}" name="mi_id" value="{{mi_id}}"/> 
+    <text>谜号：{{mihao}}</text>
+    <view>密码</view>
+    <input type="password" name="password"/>
+    <view>年龄</view>
+    <input type="number" name="age" value="{{age}}"/>
+    <view>性别</view>
+    <input type="number" name="gender" value="{{gender}}"/>
+    <view>手机号</view>
+    <input type="number" name="phone" value="{{phone}}"/>
+    <view class="btn-area" >
+        <button size="mini" type="warn" bindtap="deleteUser" >删除</button>
+        <button size="mini" formType="reset">重填</button>
+    </view>
+    <button type="primary" formType="submit">修改</button>
+</form>

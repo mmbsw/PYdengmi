@@ -1,0 +1,15 @@
+<form class="form" bindsubmit="addForum">
+    <input type="text" hidden="{{true}}" name="mi_id" value="{{mi_id}}"/> 
+    <text wx:if="{{mihao}}">谜号：{{mihao}}</text>
+    <view wx:else>
+        <text>还未登录，请先</text>
+        <text class="toLogin" bindtap="toLogin">登录</text>
+    </view>
+    <view class="forum">内容</view>
+    <textarea class="speech" placeholder="标题内容不要过长" name="speech" value="{{speech}}"></textarea>
+
+    <view class="btn-area">
+        <button type="primary" formType="submit">发布</button>
+        <button formType="reset">重填</button>
+    </view>
+  </form>

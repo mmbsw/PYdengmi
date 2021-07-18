@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/userInfo/userInfo",
+    "pages/zhimi/zhimi",
+    "pages/zhuye/zhuye",
+    "pages/allRiddle/allRiddle",
+    "pages/caimi/caimi",
+    "pages/forumResult/forumResult",
+    "pages/riddleResult/riddleResult",
+    "pages/mymi/mymi",
+    "pages/oneforum/oneforum",
+    "pages/allForum/allForum",
+    "pages/myInfo/myInfo",
+    "pages/myforum/myforum",
+    "pages/addForum/addForum",
+    "pages/logins/logins",
+    "pages/addRiddle/addRiddle",
+    "pages/register/register",
+    "pages/riddleDetail/riddleDetail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ece5cc",
+    "navigationBarTitleText": "蓬瀛灯谜",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#d43c33",
+    "list": [
+      {
+        "pagePath": "pages/zhuye/zhuye",
+        "text": "主页",
+        "iconPath": "/static/images/mymi.png",
+        "selectedIconPath": "/static/images/mymi-active.png"
+      },
+      {
+        "pagePath": "pages/allForum/allForum",
+        "text": "论坛",
+        "iconPath": "/static/images/luntan.png",
+        "selectedIconPath": "/static/images/luntan-active.png"
+      },
+      {
+        "pagePath": "pages/addRiddle/addRiddle",
+        "text": "添加灯谜",
+        "iconPath": "/static/images/add.png",
+        "selectedIconPath": "/static/images/add-active.png"
+      },
+      {
+        "pagePath": "pages/allRiddle/allRiddle",
+        "text": "谜库",
+        "iconPath": "/static/images/miku.png",
+        "selectedIconPath": "/static/images/miku-active.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "个人中心",
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "/static/images/my-active.png"
+      }
+    ]
+  }
+}

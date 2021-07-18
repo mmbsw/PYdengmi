@@ -1,0 +1,23 @@
+<view class="header">
+  <textarea class="inputarea"
+    name="speech" 
+    bindinput="input"
+    confirm-type="return"
+    value="{{inputValue}}"></textarea>
+  <view class="btns">
+    <button class="btn" bindtap="reset" size="mini">重填</button>
+    <button class="btn" bindtap="submit" size="mini" type="primary">发送</button>
+  </view>
+</view>
+<scroll-view scroll-y enable-flex class="main"
+  bindrefresherrefresh="refresh" refresher-enabled refresher-triggered="{{ifRefresh}}">
+  <view class="line"></view>
+  <view class="body" wx:for="{{forumList}}" wx:key="time">
+  <view class="mihaoAndTime">
+    <text class="publisher">{{item.publisher}}</text>
+    <text class="time">{{item.time}}</text>
+  </view>
+  <view class="speech">{{item.speech}}</view>
+  <view class="line"></view>
+</view>
+</scroll-view>

@@ -1,0 +1,53 @@
+<view class="mainContainer">
+  <view class="header">
+    <text class="iconfont icon-tiger" bindtap="zhimi">与虎谋皮</text>
+    <text class="iconfont icon-caimiyu" bindtap="caimi">每日一猜</text>
+  </view>
+  <view class="line"></view>
+  <view class="selectContainer">
+    <view class="title">
+      <text class="left">灯谜查询</text>
+      <text class="right" plain size="mini" bindtap="tomiku">进入谜库</text>
+    </view>
+    <radio-group class="radio-group" bindchange="getradio">
+        <radio class="radio-item" value="mihao">谜号</radio>
+        <radio class="radio-item" value="mimian">谜面</radio>
+        <radio class="radio-item" checked value="mimu">谜目</radio>
+        <radio class="radio-item" value="midi" >谜底</radio>
+    </radio-group>
+    <view class="search">
+      <input class="search-item" bindinput="getRiddle" type="text" confirm-type="search" placeholder="请输入要查询的内容--默认：字"/>
+      <button class="search-btn" bindtap="searchRiddle" type="primary" size="mini">搜索</button>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="selectContainer">
+    <view class="title">
+      <text class="left">帖子查询</text>
+      <text class="right" plain size="mini" bindtap="toluntan">进入论坛</text>
+    </view>
+    <view class="search">
+      <input class="search-item" bindinput="getForum" type="text" confirm-type="search" placeholder="请输入要查询的内容--默认：字"/>
+      <button class="search-btn" bindtap="searchForum" type="primary" size="mini">搜索</button>
+    </view>
+  </view>
+  <view class="line"></view>
+  <!-- 推荐灯谜 -->
+  <view class="recommend">
+    <view class="title">
+      <text class="left">推荐灯谜</text>
+      <text class="right" plain size="mini" bindtap="tomiku">进入谜库</text>
+    </view>
+    <swiper scroll-x 
+            indicator-dots 
+            autoplay 
+            class="recommendList">
+      <swiper-item class="item" wx:for="{{recommendList}}" wx:key="mi_id">
+        <view class="riddleItem">{{item.mihao}}</view>
+        <view class="riddleItem">{{item.mimian}}</view>
+        <view class="riddleItem">{{item.mimu}}</view>
+        <view class="riddleItem">{{item.midi}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

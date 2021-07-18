@@ -1,0 +1,52 @@
+.header{
+  display: flex;
+}
+.inputarea{
+  display: flex;
+  flex: 1;
+  border: 2rpx solid #000;
+  border-radius: 10rpx;
+  margin: 25rpx;
+  height: 100rpx;
+  padding: 20rpx 0 20rpx 20rpx;
+  font-size: 40rpx;
+}
+.btns{
+  width: 120rpx;
+  margin: 25rpx 25rpx 25rpx 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.main{
+  height: calc(100vh - 250rpx);
+}
+.mihaoAndTime{
+  display: flex;
+  position: relative;
+}
+.publisher{
+  margin-left: 20rpx;
+  font-size: 25rpx;
+  flex: 1;
+}
+.time{
+  margin-right: 20rpx;
+  font-size: 25rpx;
+}
+.line{
+  height: 2rpx;
+  width: 100%;
+  background-color:#90a4ae; 
+  margin: 5rpx 0; 
+}
+.speech{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+}

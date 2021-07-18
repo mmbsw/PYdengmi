@@ -1,0 +1,25 @@
+<form class="form" bindsubmit="addRiddle">
+    <input type="text" hidden="{{true}}" name="mi_id" value="{{mi_id}}"/> 
+    <text wx:if="{{mihao}}">谜号：{{mihao}}</text>
+    <view wx:else>
+        <text>还未登录，请先</text>
+        <text class="toLogin" bindtap="toLogin">登录</text>
+    </view>
+    <view class="riddle">谜面</view>
+    <textarea class="mimian" name="mimian" value="{{mimian}}"></textarea>
+    <view class="riddle">谜目</view>
+    <textarea type="text" required="" name="mimu" value="{{mimu}}"></textarea>
+    <view class="riddle">谜底</view>
+    <textarea type="text" required="" name="midi" value="{{midi}}"></textarea>
+    <view class="riddle">备注</view>
+    <textarea type="text" name="remark" value="{{remark}}"></textarea>
+    <view class="riddle">是否分享到灯谜库</view>
+    <radio-group class="radio" bindchange="ifShare">
+        <label><radio value="1" >分享</radio></label>
+        <label><radio value="0" checked="{{true}}">不分享</radio></label>
+    </radio-group>
+    <view class="btn-area">
+        <button type="primary" formType="submit">添加</button>
+        <button formType="reset">重填</button>
+    </view>
+  </form>

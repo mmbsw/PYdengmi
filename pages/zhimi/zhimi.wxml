@@ -1,0 +1,50 @@
+<view class="zhimiContainer">
+  <!-- 添加题目相关 -->
+  <view class="rootUser" wx:if="{{mihao === '蓬瀛灯谜'}}">
+    <text>以</text>
+    <input class="input" value="{{titlevalue}}" bindinput="inputTopic"/>
+    <text>为底，允许底材做适当延伸。</text>
+    <text class="iconfont icon-gou" bindtap="submitTopic"></text>
+  </view>
+  <view class="rootUser" wx:else>
+    <text>以</text>
+    <input class="input" disabled	 value="{{titlevalue}}"/>
+    <text>为底，允许底材做适当延伸。</text>
+  </view>
+  <view class="line"></view>
+  <!-- 输入灯谜区 -->
+  <view class="riddleContainer">
+    <label>谜面</label>
+    <textarea class="inputRiddle" id="mimian" bindinput="inputRiddle" value="{{mimian}}"></textarea>
+  </view>
+  <view class="riddleContainer">
+    <label>谜目</label>
+    <textarea class="inputRiddle" id="mimu" bindinput="inputRiddle" value="{{mimu}}"></textarea>
+  </view>
+  <view class="riddleContainer">
+    <label>谜底</label>
+    <textarea class="inputRiddle" id="midi" bindinput="inputRiddle" value="{{midi}}"></textarea>
+  </view>
+  <view class="riddleContainer">
+    <label>备注</label>
+    <textarea class="inputRiddle" id="remark" bindinput="inputRiddle" value="{{remark}}"></textarea>
+  </view>
+  <button bindtap="submitRiddle" wx:if="{{mihao!='蓬瀛灯谜'}}" type="primary">提交</button>
+  <view class="line"></view>
+  <!-- 已有作品 -->
+  <view class="title">佳作欣赏</view>
+  <view wx:for="{{allWork}}" class="riddle" wx:key="id">
+    <text class="mihao">{{item.mihao}}</text>
+    <text>{{item.mimian}} </text>
+    <text decode>&ensp;（{{item.mimu}}）&ensp;</text>
+    <text>{{item.midi}} </text>
+    <text class="vote" id="{{index}}"  bindtap="toVote">
+      <text class="votes">{{item.votes}}</text>
+      <text class="icon">
+        <text wx:if="{{item.ifVote}}" class="iconfont icon-aixin"></text>
+        <text wx:elif="{{!item.ifVote}}" class="iconfont icon-xin"></text>
+      </text>
+    </text>
+    <text class="div"> </text>
+  </view>
+</view>

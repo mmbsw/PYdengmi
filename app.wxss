@@ -1,0 +1,10 @@
+@import "static/iconfont/iconfont.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 

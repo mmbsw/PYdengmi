@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{forumList}}" wx:key="id">
+    <view class="content">
+      <view class="body">
+        <view class="publisher">{{item.publisher}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+      <view class="forumTitle"  bindtap="look" data-id="{{item.topic_id}}">{{item.speech}}</view>
+    </view>
+    <view wx:if="{{mihao == item.publisher || mihao == '蓬瀛灯谜'}}" class="del" catchtap="delete" data-index="{{item.topic_id}}">删除</view>
+  </view>
+</view>

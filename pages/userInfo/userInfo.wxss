@@ -1,0 +1,19 @@
+.rigist{
+  display: flex;
+  justify-content:center;
+  margin: 30rpx;
+  
+}
+text,navigator{
+  font-size: 50rpx;
+}
+.line{
+  margin: 20rpx 20rpx 20rpx 80rpx;
+  height: 2rpx;
+  width: 650rpx;
+  background-color:#90a4ae;  
+}
+.iconfont{
+  font-size: 60rpx;
+  margin: 0 20rpx 0 20rpx ;
+}

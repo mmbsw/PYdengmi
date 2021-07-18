@@ -1,0 +1,37 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">谜面</view>
+    <view class="th">谜目</view>
+    <view class="th">谜底</view>
+  </view>
+  <scroll-view scroll-y 
+      enable-flex 
+      class="main"
+      refresher-triggered="{{isTriggered}}"
+      refresher-enabled="true"
+      bindrefresherrefresh="refresher"
+      scroll-into-view="{{top_id}}"
+  >
+    <view  wx:for="{{riddlesList}}" wx:key="mi_id" id="top_view">
+      <!-- <navigator url="../riddleDetail/riddleDetail?mi_id={{item.mi_id}}&mihao={{item.mihao}}&mimian={{item.mimian}}&mimu={{item.mimu}}&midi={{item.midi}}&remark={{item.remark}}&signed={{item.signed}}"
+      hover-class="navigator-hover"> -->
+      <view bindtap="toRiddleDetail" id="{{index}}">
+        <view class="tr bg-g" wx:if="{{index % 2 == 0}}" >
+          <view class="td">{{item.mimian}}</view>
+          <view class="td">{{item.mimu}}</view>
+          <view class="td">{{item.midi}}</view>
+        </view>
+        <view class="tr bg-w" wx:else >
+          <view class="td">{{item.mimian}}</view>
+          <view class="td">{{item.mimu}}</view>
+          <view class="td">{{item.midi}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="tr">
+      <button class="th" bindtap="lastPage">上一页</button>
+      <button class="th">第{{currentPage}}/{{totalPage}}页</button>
+      <button class="th" bindtap="nextPage">下一页</button>
+    </view>
+  </scroll-view>
+</view>

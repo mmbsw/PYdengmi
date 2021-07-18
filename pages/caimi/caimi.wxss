@@ -1,0 +1,56 @@
+.caimiContianer{
+  margin: 0rpx 20rpx;
+}
+/*  输入灯谜区 */
+.riddleContainer{
+  display: flex;
+  margin-top: 30rpx;
+}
+label{
+  width: 100rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+
+.inputRiddle{
+  border: 2rpx solid #cdc;
+  height: 80rpx;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+button{
+  margin-top: 30rpx;
+}
+
+.line{
+  width: 100%;
+  background: #222;
+  height: 2rpx;
+  margin-top: 30rpx;
+}
+.mihaoList{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.mihao{
+  display: flex;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  padding: 10rpx 20rpx;
+  background-color: #ede;
+}
+.first{
+  color: #fff;
+  background-color: #bb9b4d;
+}
+.second{
+  color: #fff;
+  background-color: #4766a5;
+}
+.third{
+  color: #fff;
+  background-color: #124245;
+}
